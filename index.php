@@ -13,6 +13,13 @@ $(document).ready(function() {
             success: function(response) {
 		console.log('SUCCESS');
                 console.log(response);
+		    var uri = 'bit.print://balitekno.com/sinarjaya' + 
+			'?h=' + response.h + 
+			'&c=' + response.c + 
+			'&f=' + response.f + 
+			'&q=' + response.q;
+		    window.location = uri;
+		    /*
 		$.ajax({
 		    url: 'http://localhost:8080',
 		    crossOrigin: true,
@@ -36,6 +43,7 @@ $(document).ready(function() {
 			    }
 		    }
 		});
+		*/
             },
             error: function(xhr) {
                 alert('error');
